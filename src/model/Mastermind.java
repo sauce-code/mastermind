@@ -198,8 +198,24 @@ public class Mastermind {
 	 * @return neue zuf&auml;llige L&ouml;sung
 	 */
 	private int generiereLoesung() {
-		// TODO Auto-generated method stub
-		return 0;
+		int loesung = 0;
+		for (int i = 0; i < codeLaenge; i++) {
+			loesung += 10 ^ i * zufallsZahl(1, farbAnzahl);
+		}
+		return loesung;
+	}
+
+	/**
+	 * Liefert eine Zufallszahl.
+	 * 
+	 * @param min
+	 *            untere Grenze
+	 * @param max
+	 *            obere Grenze
+	 * @return Zufallszahl
+	 */
+	private int zufallsZahl(int min, int max) {
+		return min + (int) (Math.random() * ((max - min) + 1));
 	}
 
 }
