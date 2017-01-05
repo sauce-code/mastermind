@@ -56,6 +56,7 @@ public class Mastermind {
 	 * @param farbAnzahl
 	 */
 	public Mastermind(int codeLaenge, int farbAnzahl) {
+		this.codeLaenge = codeLaenge;
 		this.farbAnzahl = farbAnzahl;
 		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
