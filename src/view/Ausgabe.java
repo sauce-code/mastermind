@@ -9,7 +9,7 @@ import model.Mastermind;
  *
  */
 public class Ausgabe {
-	
+
 	/**
 	 * Mastermind-Spiel, welches ausgegeben werden soll.
 	 */
@@ -39,10 +39,18 @@ public class Ausgabe {
 	 * Bewertungen, damit der Spieler alle Informationen f&uuml;r seinen
 	 * n&auml;chsten Versuch zur Hand hat.
 	 */
-	// TODO Überlegen Sie sich auch eine passende Ausgabe für den Fall, dass
-	// noch gar keine Versuche vorliegen.
 	public void druckeSpielverlauf() {
-
+		if (spiel.rufeAnzahlVersucheAb() == 0) {
+			System.out.println("Bisher kein Spielverlauf.");
+		} else {
+			System.out.println("Bislang hast Du so gespielt:");
+			for (int i = 0; i < spiel.rufeAnzahlVersucheAb(); i++) {
+				int versuch = spiel.rufeVersuchAb(i);
+				int s = spiel.bewerteVersuch(versuch) / 10;
+				int w = spiel.bewerteVersuch(versuch) % 10;
+				System.out.println("Dein Versuch #" + (i + 1) + ": " + versuch + " Bewertung: " + s + "-" + w);
+			}
+		}
 	}
 
 	/**
