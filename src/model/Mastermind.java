@@ -82,7 +82,7 @@ public class Mastermind {
 	 * @return {@code true}, falls Versuch g&uuml;ltig
 	 */
 	public boolean speichereNaechstenVersuch(int versuch) {
-		if (!versuchInOrdnung(versuch)) {
+		if (!istVersuchGueltig(versuch)) {
 			return false;
 		}
 		versuche[aktuellerVersuch] = versuch;
@@ -98,7 +98,7 @@ public class Mastermind {
 	 *            Versuch, welcher &uuml;berpr&uuml;ft werden soll
 	 * @return {@code true}, falls Veruch in ordnung
 	 */
-	private boolean versuchInOrdnung(int versuch) {
+	private boolean istVersuchGueltig(int versuch) {
 		// TODO Auto-generated method stub
 		return false;
 	}
@@ -161,7 +161,7 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public int bewerteVersuch(int versuch) {
-		if (!versuchInOrdnung(versuch)) {
+		if (!istVersuchGueltig(versuch)) {
 			return -1;
 		}
 		return 0;
