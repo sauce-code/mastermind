@@ -116,7 +116,7 @@ public class Mastermind {
 	 * mit den Nummern 1 bis 7.
 	 * 
 	 * @param index
-	 *            Index dex Versuchs, welcher abgerufen werden soll
+	 *            Index des Versuchs, welcher abgerufen werden soll
 	 * @return
 	 * 		<ul>
 	 *         <li>{@code -1}, falls Index ung&uuml;ltig</li>
