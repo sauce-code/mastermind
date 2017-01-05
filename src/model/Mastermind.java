@@ -60,7 +60,7 @@ public class Mastermind {
 	 * 
 	 * @param versuch
 	 *            wievielter versuch?
-	 * @return {@code true}, falls Versuch ung&uuml;ltig
+	 * @return {@code true}, falls Versuch g&uuml;ltig
 	 */
 	public boolean speichereNaechstenVersuch(int versuch) {
 		return false;
