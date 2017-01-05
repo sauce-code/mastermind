@@ -31,6 +31,11 @@ public class Mastermind {
 	 * Speichert die Nummer des aktuellen Versuchs ab.
 	 */
 	private int aktuellerVersuch;
+	
+	/**
+	 * Die L&ouml;sung des Spiels.
+	 */
+	private int loesung;
 
 	/**
 	 * Unzul&auml;ssige Angaben werden kommentarlos durch die Standardwerte des
