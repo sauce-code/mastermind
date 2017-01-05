@@ -111,7 +111,7 @@ public class Mastermind {
 	}
 
 	/**
-	 * Gibt den {@code index}–ten Versuch zur&uuml;ck. Diese sind ab 1
+	 * Gibt den {@code index}-ten Versuch zur&uuml;ck. Diese sind ab 1
 	 * durchnummeriert, d.h. bei bislang z.B. 7 Versuchen gibt es die Versuche
 	 * mit den Nummern 1 bis 7.
 	 * 
@@ -119,7 +119,7 @@ public class Mastermind {
 	 * @return
 	 * 		<ul>
 	 *         <li>{@code -1}, falls Index ung&uuml;ltig</li>
-	 *         <li>{@code index}–te Versuch, sonst</li>
+	 *         <li>{@code index}-te Versuch, sonst</li>
 	 *         </ul>
 	 */
 	public int rufeVersuchAb(int index) {
