@@ -123,7 +123,7 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public int rufeVersuchAb(int index) {
-		return 0;
+		return versuche[index];
 	}
 
 	/**
