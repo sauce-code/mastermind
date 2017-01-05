@@ -174,7 +174,16 @@ public class Mastermind {
 		if (!istVersuchGueltig(versuch)) {
 			return -1;
 		}
-		return 0;
+		int bewertung = 0;
+		int loesungKopie = loesung;
+		for (int i = 0; i < codeLaenge; i++) {
+			int zifferVersuch = versuch % 10;
+			int zifferLoesung = loesungKopie % 10;
+			
+			bewertung += 0;
+			versuch = versuch / 10;
+		}
+		return bewertung;
 	}
 
 	/**
