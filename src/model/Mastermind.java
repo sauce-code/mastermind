@@ -60,6 +60,7 @@ public class Mastermind {
 		this.farbAnzahl = farbAnzahl;
 		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
+		this.aktuellerVersuch = 0;
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class Mastermind {
 		if (!istVersuchGueltig(versuch)) {
 			return false;
 		}
-		versuche[aktuellerVersuch] = versuch;
+		versuche[aktuellerVersuch++] = versuch;
 		return true;
 	}
 
@@ -179,7 +180,7 @@ public class Mastermind {
 		for (int i = 0; i < codeLaenge; i++) {
 			int zifferVersuch = versuch % 10;
 			int zifferLoesung = loesungKopie % 10;
-			
+
 			bewertung += 0;
 			versuch = versuch / 10;
 		}
@@ -210,6 +211,7 @@ public class Mastermind {
 	public void spielZuruecksetzen() {
 		versuche = new int[MAX_VERSUCHE];
 		loesung = generiereLoesung();
+		aktuellerVersuch = 0;
 	}
 
 	/**
