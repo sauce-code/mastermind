@@ -123,7 +123,19 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public int rufeVersuchAb(int index) {
-		return versuche[index];
+		return istIndexGueltig(index) ? versuche[index] : -1;
+	}
+
+	/**
+	 * Gibt an, ob ein Index g&uuml;ltig ist.
+	 * 
+	 * @param index
+	 *            Index, welche &uuml;berpr&uuml;ft werden soll.
+	 * @return {@code true}, falls Index g&uuml;ltig
+	 */
+	private boolean istIndexGueltig(int index) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	/**
