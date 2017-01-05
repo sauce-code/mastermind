@@ -58,7 +58,7 @@ public class Mastermind {
 	public Mastermind(int codeLaenge, int farbAnzahl) {
 		this.farbAnzahl = farbAnzahl;
 		this.versuche = new int[MAX_VERSUCHE];
-		this.loesung = 0; // TODO generiere loesung
+		this.loesung = generiereLoesung();
 	}
 
 	/**
@@ -186,7 +186,17 @@ public class Mastermind {
 	 */
 	public void spielZuruecksetzen() {
 		versuche = new int[MAX_VERSUCHE];
-		loesung = 0; // TODO generiere loesung
+		loesung = generiereLoesung();
+	}
+
+	/**
+	 * Generiert eine neue zuf&auml;llige L&ouml;sung.
+	 * 
+	 * @return neue zuf&auml;llige L&ouml;sung
+	 */
+	private int generiereLoesung() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
