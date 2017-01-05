@@ -39,7 +39,14 @@ public class Steuerung {
 	 * das Spiel beendet.
 	 */
 	public void starteSpiel() {
-
+		ausgabe.denSpielerBegruessen();
+		do {
+			ausgabe.druckeSpielverlauf();
+			ausgabe.spielerZumVersuchAuffordern();
+			int versuch = Terminal.readInt();
+			spiel.speichereNaechstenVersuch(versuch);
+		} while(!spiel.spielGewonnen());
+		ausgabe.demSpielerGratulieren();
 	}
 
 	/**

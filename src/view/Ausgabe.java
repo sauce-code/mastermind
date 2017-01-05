@@ -58,7 +58,7 @@ public class Ausgabe {
 	 * zugleich dar&uuml;ber, um den wievielten Versuch es sich handelt.
 	 */
 	public void spielerZumVersuchAuffordern() {
-		System.out.print("Gib bitte Deinen Versuch #" + (spiel.rufeAnzahlVersucheAb() + 1) + " ein: ");
+		System.out.print("Gib bitte Deinen Versuch #" + (spiel.rufeAnzahlVersucheAb() + 2) + " ein: ");
 	}
 
 	/**

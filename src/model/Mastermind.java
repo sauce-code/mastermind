@@ -149,7 +149,7 @@ public class Mastermind {
 	 * @return {@code true}, falls Index g&uuml;ltig
 	 */
 	private boolean istIndexGueltig(int index) {
-		return (index > 0) && (index < aktuellerVersuch);
+		return (index >= 0) && (index < aktuellerVersuch);
 	}
 
 	/**
