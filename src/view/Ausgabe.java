@@ -5,6 +5,8 @@ import model.Mastermind;
 /**
  * Ausgabe-Klasse.
  * 
+ * @see model.Mastermind
+ * 
  * @author ich
  *
  */

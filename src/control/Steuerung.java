@@ -6,6 +6,10 @@ import model.Mastermind;
 /**
  * Stererungs-Klasse.
  * 
+ * @see control.Terminal
+ * @see model.Mastermind
+ * @see view.Ausgabe
+ * 
  * @author ich
  *
  */
