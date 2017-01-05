@@ -154,13 +154,16 @@ public class Mastermind {
 	 *            welcher Versuch?
 	 * @return
 	 * 		<ul>
-	 *         <li>{@code -1}, falls Index ung&uuml;ltig</li>
+	 *         <li>{@code -1}, falls Versuch ung&uuml;ltig</li>
 	 *         <li>Anzahl {@code s} der schwarzen und die Anzahl {@code w} der
 	 *         wei&szlig;en Stifte f&uuml;r den &uuml;bergebenen Versuch als
 	 *         Zahl {@code 10 s + w}, sonst</li>
 	 *         </ul>
 	 */
 	public int bewerteVersuch(int versuch) {
+		if (!versuchInOrdnung(versuch)) {
+			return -1;
+		}
 		return 0;
 	}
 
