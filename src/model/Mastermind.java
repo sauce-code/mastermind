@@ -21,6 +21,16 @@ public class Mastermind {
 	 * Maximale Anzahl Versuche pro Partie.
 	 */
 	public static final int MAX_VERSUCHE = 10;
+	
+	/**
+	 * Speichert alle Versuche ab.
+	 */
+	private int[][] versuche;
+	
+	/**
+	 * Speichert die Nummer des aktuellen Versuchs ab.
+	 */
+	private int aktuellerVersuch;
 
 	/**
 	 * Unzul&auml;ssige Angaben werden kommentarlos durch die Standardwerte des
