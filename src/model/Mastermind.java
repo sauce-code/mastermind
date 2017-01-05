@@ -177,7 +177,7 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public boolean spielGewonnen() {
-		return false;
+		return (aktuellerVersuch > 0) && (versuche[aktuellerVersuch] == loesung);
 	}
 
 	/**
