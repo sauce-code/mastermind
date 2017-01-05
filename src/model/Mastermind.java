@@ -21,7 +21,7 @@ public class Mastermind {
 	/**
 	 * Maximale Anzahl Versuche pro Partie.
 	 */
-	public static final int MAX_VERSUCHE = 10;
+	public static final int MAX_VERSUCHE = 1000;
 
 	/**
 	 * Speichert alle Versuche ab.
@@ -121,7 +121,7 @@ public class Mastermind {
 	 * @return bisherige Anzahl der Versuche
 	 */
 	public int rufeAnzahlVersucheAb() {
-		return aktuellerVersuch - 1;
+		return aktuellerVersuch;
 	}
 
 	/**
