@@ -30,7 +30,7 @@ public class Ausgabe {
 	 * Anfang pr&auml;sentiert werden kann.
 	 */
 	public void denSpielerBegruessen() {
-
+		System.out.println("Willkommen zu Mastermind - und los geht’s!");
 	}
 
 	/**
