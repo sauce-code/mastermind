@@ -52,7 +52,7 @@ public class Steuerung {
 	/**
 	 * Main Methode zum Ausf&uuml;hren des Mastermind-Spiels.
 	 * 
-	 * @param args ungenutzt
+	 * @param args Parameter, ungenutzt
 	 */
 	public static void main(String args[]) {
 		Mastermind m = new Mastermind();
