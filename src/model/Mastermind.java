@@ -9,14 +9,34 @@ package model;
 public class Mastermind {
 
 	/**
-	 * Standard codel&auml;nge.
+	 * Minimale Codel&auml;nge.
+	 */
+	public static final int MIN_CODE_LAENGE = 1;
+
+	/**
+	 * Standard Codel&auml;nge.
 	 */
 	public static final int STANDARD_CODE_LAENGE = 4;
+
+	/**
+	 * Maximale Codel&auml;nge.
+	 */
+	public static final int MAX_CODE_LAENGE = 20;
+
+	/**
+	 * Minimale Farbanzahl.
+	 */
+	public static final int MIN_FARB_ANZAHL = 1;
 
 	/**
 	 * Standard farbanzahl.
 	 */
 	public static final int STANDARD_FARB_ANZAHL = 6;
+
+	/**
+	 * Maximale Farbanzahl.
+	 */
+	public static final int MAX_FARB_ANZAHL = 9;
 
 	/**
 	 * Maximale Anzahl Versuche pro Partie.
@@ -56,11 +76,25 @@ public class Mastermind {
 	 * @param farbAnzahl
 	 */
 	public Mastermind(int codeLaenge, int farbAnzahl) {
-		this.codeLaenge = codeLaenge;
-		this.farbAnzahl = farbAnzahl;
+		this.codeLaenge = korrigiereCodeLaenge(codeLaenge);
+		this.farbAnzahl = korrigiereFarbAnzahl(farbAnzahl);
 		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
 		this.aktuellerVersuch = 0;
+	}
+
+	private int korrigiereCodeLaenge(int codeLaenge) {
+		if (codeLaenge < MIN_CODE_LAENGE || codeLaenge > MAX_CODE_LAENGE) {
+			return STANDARD_CODE_LAENGE;
+		}
+		return codeLaenge;
+	}
+
+	private int korrigiereFarbAnzahl(int farbAnzahl) {
+		if (farbAnzahl < MIN_FARB_ANZAHL || farbAnzahl > MAX_FARB_ANZAHL) {
+			return STANDARD_FARB_ANZAHL;
+		}
+		return farbAnzahl;
 	}
 
 	/**
@@ -201,7 +235,7 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public boolean spielGewonnen() {
-		return (aktuellerVersuch > 0) && (versuche[aktuellerVersuch] == loesung);
+		return (aktuellerVersuch > 0) && (versuche[aktuellerVersuch - 1] == loesung);
 	}
 
 	/**
