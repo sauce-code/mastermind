@@ -83,6 +83,20 @@ public class Mastermind {
 		this.aktuellerVersuch = 0;
 	}
 
+	/**
+	 * Liefert die Codel&auml;nge korrigiert zur&uuml;ck, falls n&ouml;tig.
+	 * 
+	 * @param codeLaenge
+	 *            Codel&auml;nge, welche korrigiert werden soll.
+	 * @return
+	 * 		<ul>
+	 *         <li>codeLaenge, falls codeLaenge g&uuml;ltig</li>
+	 *         <li>{@link #STANDARD_CODE_LAENGE}, falls codeLaenge {@code <}
+	 *         {@link #MIN_CODE_LAENGE}</li>
+	 *         <li>{@link #STANDARD_CODE_LAENGE}, falls codeLaenge {@code >}
+	 *         {@link #MAX_CODE_LAENGE}</li>
+	 *         </ul>
+	 */
 	private int korrigiereCodeLaenge(int codeLaenge) {
 		if (codeLaenge < MIN_CODE_LAENGE || codeLaenge > MAX_CODE_LAENGE) {
 			return STANDARD_CODE_LAENGE;
@@ -90,6 +104,20 @@ public class Mastermind {
 		return codeLaenge;
 	}
 
+	/**
+	 * Liefert die Farbanzahl korrigiert zur&uuml;ck, falls n&ouml;tig.
+	 * 
+	 * @param farbAnzahl
+	 *            Farbanzahl, welche korrigiert werden soll.
+	 * @return
+	 * 		<ul>
+	 *         <li>farbAnzahl, falls farbAnzahl g&uuml;ltig</li>
+	 *         <li>{@link #STANDARD_FARB_ANZAHL}, falls farbAnzahl {@code <}
+	 *         {@link #MIN_FARB_ANZAHL}</li>
+	 *         <li>{@link #STANDARD_FARB_ANZAHL}, falls farbAnzahl {@code >}
+	 *         {@link #MAX_FARB_ANZAHL}</li>
+	 *         </ul>
+	 */
 	private int korrigiereFarbAnzahl(int farbAnzahl) {
 		if (farbAnzahl < MIN_FARB_ANZAHL || farbAnzahl > MAX_FARB_ANZAHL) {
 			return STANDARD_FARB_ANZAHL;
