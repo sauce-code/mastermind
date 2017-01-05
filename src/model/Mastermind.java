@@ -38,6 +38,11 @@ public class Mastermind {
 	private int loesung;
 
 	/**
+	 * Die Anzahl der zugelassenen Farben.
+	 */
+	private int farbAnzahl;
+	
+	/**
 	 * Unzul&auml;ssige Angaben werden kommentarlos durch die Standardwerte des
 	 * Originalspiels {@link #Mastermind()} ersetzt.
 	 * 
@@ -45,7 +50,7 @@ public class Mastermind {
 	 * @param farbAnzahl
 	 */
 	public Mastermind(int codeLaenge, int farbAnzahl) {
-
+		
 	}
 
 	/**
