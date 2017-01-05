@@ -107,7 +107,7 @@ public class Mastermind {
 	 * @return bisherige Anzahl der Versuche
 	 */
 	public int rufeAnzahlVersucheAb() {
-		return 0;
+		return aktuellerVersuch;
 	}
 
 	/**
