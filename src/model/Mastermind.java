@@ -137,8 +137,7 @@ public class Mastermind {
 	 * @return {@code true}, falls Index g&uuml;ltig
 	 */
 	private boolean istIndexGueltig(int index) {
-		// TODO Auto-generated method stub
-		return false;
+		return (index > 0) && (index < aktuellerVersuch);
 	}
 
 	/**
