@@ -184,7 +184,8 @@ public class Mastermind {
 	 * werden gel&ouml;scht und es wird ein neuer Zufallscode erzeugt.
 	 */
 	public void spielZuruecksetzen() {
-
+		versuche = new int[MAX_VERSUCHE];
+		loesung = 0; // TODO generiere loesung
 	}
 
 }
