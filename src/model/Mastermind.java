@@ -99,8 +99,19 @@ public class Mastermind {
 	 * @return {@code true}, falls Veruch in ordnung
 	 */
 	private boolean istVersuchGueltig(int versuch) {
-		// TODO Auto-generated method stub
-		return false;
+
+		// ueberpruefe codelaenge
+		boolean gueltig = versuch < Math.pow(10, codeLaenge + 1);
+
+		// ueberpruefe farben
+		for (int i = 0; i < codeLaenge; i++) {
+			int ziffer = versuch % 10;
+			gueltig &= (ziffer > 0) && (ziffer < farbAnzahl);
+			versuch = versuch / 10;
+		}
+
+		// liefere ergebnis
+		return gueltig;
 	}
 
 	/**
