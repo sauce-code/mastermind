@@ -12,15 +12,26 @@ import model.Mastermind;
 public class Steuerung {
 
 	/**
+	 * Mastermind-Spiel, welches verwendet werden soll.
+	 */
+	private Mastermind spiel;
+	
+	/**
+	 * Ausgabe, die verwendet werden soll.
+	 */
+	private Ausgabe ausgabe;
+	
+	/**
 	 * Erzeugt eine neue Steuerung.
 	 * 
 	 * @param spiel
-	 *            Mastermind-Spiel, welches ausgegeben werden soll
+	 *            Mastermind-Spiel, welches verwendet werden soll
 	 * @param ausgabe
 	 *            Ausgabe, die verwendet werden soll
 	 */
 	public Steuerung(Mastermind spiel, Ausgabe ausgabe) {
-
+		this.spiel = spiel;
+		this.ausgabe = ausgabe;
 	}
 
 	/**
