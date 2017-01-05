@@ -66,7 +66,7 @@ public class Ausgabe {
 	 * zuvor bereits den Geheimcode geknackt hat.
 	 */
 	public void demSpielerGratulieren() {
-
+		System.out.println("Glueckwunsch! - Du hast gewonnen!");
 	}
 
 }
