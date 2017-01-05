@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Hilfs-Klasse zum Einlesen von zahlen von der Konsole.
+ * Hilfs-Klasse zum Einlesen von Zahlen von der Konsole.
  * 
  * @author ich
  *
