@@ -131,9 +131,9 @@ public class Mastermind {
 	 * wei&szlig;en Stifte f&uuml;r den &uuml;bergebenen Versuch und gibt diese
 	 * als die Zahl {@code 10 s + w} zur&uuml;ck. Der Aufruf
 	 * {@code bewerteVersuch(491472)} f&uuml;hrt bei dem Geheimcode
-	 * {@code 711574} also zu dem Ergebnis {@code 2 · 10 + 1 = 21}. Ein
+	 * {@code 711574} also zu dem Ergebnis {@code 2 � 10 + 1 = 21}. Ein
 	 * ung&uuml;ltiger Versuch (siehe {@link #rufeVersuchAb(int)}) wird mit dem
-	 * R&uuml;ckgabewert {@code −1} zur&uuml;ckgewiesen.
+	 * R&uuml;ckgabewert {@code -1} zur&uuml;ckgewiesen.
 	 * 
 	 * @param versuch
 	 *            welcher Versuch?
