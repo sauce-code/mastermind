@@ -12,7 +12,7 @@ import model.Mastermind;
 public class Steuerung {
 
 	/**
-	 * Erzeugt eine neue Stererung.
+	 * Erzeugt eine neue Steuerung.
 	 * 
 	 * @param spiel
 	 *            Mastermind-Spiel, welches ausgegeben werden soll
