@@ -254,7 +254,7 @@ public class Mastermind {
 	 * 
 	 * @return
 	 * 		<ul>
-	 *         <li>{@ode true}, falls der zuletzt abgegebene Versuch erfolgreich
+	 *         <li>{@code true}, falls der zuletzt abgegebene Versuch erfolgreich
 	 *         war</li>
 	 *         <li>{@code false}, falls der zuletzt abgegebene Versuche nicht
 	 *         erfolgreich war</li>
