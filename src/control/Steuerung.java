@@ -15,12 +15,12 @@ public class Steuerung {
 	 * Mastermind-Spiel, welches verwendet werden soll.
 	 */
 	private Mastermind spiel;
-	
+
 	/**
 	 * Ausgabe, die verwendet werden soll.
 	 */
 	private Ausgabe ausgabe;
-	
+
 	/**
 	 * Erzeugt eine neue Steuerung.
 	 * 
@@ -45,14 +45,15 @@ public class Steuerung {
 			ausgabe.spielerZumVersuchAuffordern();
 			int versuch = Terminal.readInt();
 			spiel.speichereNaechstenVersuch(versuch);
-		} while(!spiel.spielGewonnen());
+		} while (!spiel.spielGewonnen());
 		ausgabe.demSpielerGratulieren();
 	}
 
 	/**
 	 * Main Methode zum Ausf&uuml;hren des Mastermind-Spiels.
 	 * 
-	 * @param args Parameter, ungenutzt
+	 * @param args
+	 *            Parameter, ungenutzt
 	 */
 	public static void main(String args[]) {
 		Mastermind m = new Mastermind();
