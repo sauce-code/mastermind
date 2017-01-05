@@ -11,32 +11,32 @@ public class Mastermind {
 	/**
 	 * Minimale Codel&auml;nge.
 	 */
-	public static final int MIN_CODE_LAENGE = 1;
+	public static final int MIN_CODELAENGE = 1;
 
 	/**
 	 * Standard Codel&auml;nge.
 	 */
-	public static final int STANDARD_CODE_LAENGE = 4;
+	public static final int STANDARD_CODELAENGE = 4;
 
 	/**
 	 * Maximale Codel&auml;nge.
 	 */
-	public static final int MAX_CODE_LAENGE = 20;
+	public static final int MAX_CODELAENGE = 20;
 
 	/**
 	 * Minimale Farbanzahl.
 	 */
-	public static final int MIN_FARB_ANZAHL = 1;
+	public static final int MIN_FARBANZAHL = 1;
 
 	/**
 	 * Standard farbanzahl.
 	 */
-	public static final int STANDARD_FARB_ANZAHL = 6;
+	public static final int STANDARD_FARBANZAHL = 6;
 
 	/**
 	 * Maximale Farbanzahl.
 	 */
-	public static final int MAX_FARB_ANZAHL = 9;
+	public static final int MAX_FARBANZAHL = 9;
 
 	/**
 	 * Maximale Anzahl Versuche pro Partie.
@@ -91,15 +91,15 @@ public class Mastermind {
 	 * @return
 	 * 		<ul>
 	 *         <li>codeLaenge, falls codeLaenge g&uuml;ltig</li>
-	 *         <li>{@link #STANDARD_CODE_LAENGE}, falls codeLaenge {@code <}
-	 *         {@link #MIN_CODE_LAENGE}</li>
-	 *         <li>{@link #STANDARD_CODE_LAENGE}, falls codeLaenge {@code >}
-	 *         {@link #MAX_CODE_LAENGE}</li>
+	 *         <li>{@link #STANDARD_CODELAENGE}, falls codeLaenge {@code <}
+	 *         {@link #MIN_CODELAENGE}</li>
+	 *         <li>{@link #STANDARD_CODELAENGE}, falls codeLaenge {@code >}
+	 *         {@link #MAX_CODELAENGE}</li>
 	 *         </ul>
 	 */
 	private int korrigiereCodeLaenge(int codeLaenge) {
-		if (codeLaenge < MIN_CODE_LAENGE || codeLaenge > MAX_CODE_LAENGE) {
-			return STANDARD_CODE_LAENGE;
+		if (codeLaenge < MIN_CODELAENGE || codeLaenge > MAX_CODELAENGE) {
+			return STANDARD_CODELAENGE;
 		}
 		return codeLaenge;
 	}
@@ -112,25 +112,25 @@ public class Mastermind {
 	 * @return
 	 * 		<ul>
 	 *         <li>farbAnzahl, falls farbAnzahl g&uuml;ltig</li>
-	 *         <li>{@link #STANDARD_FARB_ANZAHL}, falls farbAnzahl {@code <}
-	 *         {@link #MIN_FARB_ANZAHL}</li>
-	 *         <li>{@link #STANDARD_FARB_ANZAHL}, falls farbAnzahl {@code >}
-	 *         {@link #MAX_FARB_ANZAHL}</li>
+	 *         <li>{@link #STANDARD_FARBANZAHL}, falls farbAnzahl {@code <}
+	 *         {@link #MIN_FARBANZAHL}</li>
+	 *         <li>{@link #STANDARD_FARBANZAHL}, falls farbAnzahl {@code >}
+	 *         {@link #MAX_FARBANZAHL}</li>
 	 *         </ul>
 	 */
 	private int korrigiereFarbAnzahl(int farbAnzahl) {
-		if (farbAnzahl < MIN_FARB_ANZAHL || farbAnzahl > MAX_FARB_ANZAHL) {
-			return STANDARD_FARB_ANZAHL;
+		if (farbAnzahl < MIN_FARBANZAHL || farbAnzahl > MAX_FARBANZAHL) {
+			return STANDARD_FARBANZAHL;
 		}
 		return farbAnzahl;
 	}
 
 	/**
-	 * Verwendet {@link #STANDARD_CODE_LAENGE} und {@link #STANDARD_FARB_ANZAHL}
+	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL}
 	 * .
 	 */
 	public Mastermind() {
-		this(STANDARD_CODE_LAENGE, STANDARD_FARB_ANZAHL);
+		this(STANDARD_CODELAENGE, STANDARD_FARBANZAHL);
 	}
 
 	/**
