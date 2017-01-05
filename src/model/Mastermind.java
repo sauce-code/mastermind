@@ -211,7 +211,7 @@ public class Mastermind {
 	private int generiereLoesung() {
 		int loesung = 0;
 		for (int i = 0; i < codeLaenge; i++) {
-			loesung += 10 ^ i * zufallsZahl(1, farbAnzahl);
+			loesung += Math.pow(10, i * zufallsZahl(1, farbAnzahl));
 		}
 		return loesung;
 	}
