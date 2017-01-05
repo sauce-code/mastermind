@@ -9,6 +9,11 @@ import model.Mastermind;
  *
  */
 public class Ausgabe {
+	
+	/**
+	 * Mastermind-Spiel, welches ausgegeben werden soll.
+	 */
+	private Mastermind spiel;
 
 	/**
 	 * Erzeugt neue Oberfl&auml;che.
@@ -17,7 +22,7 @@ public class Ausgabe {
 	 *            Mastermind-Spiel, welches ausgegeben werden soll
 	 */
 	public Ausgabe(Mastermind spiel) {
-
+		this.spiel = spiel;
 	}
 
 	/**
