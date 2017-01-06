@@ -200,7 +200,7 @@ public class Mastermind {
 	 *         </ul>
 	 */
 	public int rufeVersuchAb(int index) {
-		return istIndexGueltig(index) ? versuche[index] : -1;
+		return istIndexGueltig(index) ? versuche[index - 1] : -1;
 	}
 
 	/**
@@ -211,7 +211,7 @@ public class Mastermind {
 	 * @return {@code true}, falls Index g&uuml;ltig
 	 */
 	private boolean istIndexGueltig(int index) {
-		return (index >= 0) && (index < aktuellerVersuch);
+		return (index > 0) && (index <= aktuellerVersuch);
 	}
 
 	/**

@@ -46,11 +46,11 @@ public class Ausgabe {
 			System.out.println("Bisher kein Spielverlauf.");
 		} else {
 			System.out.println("Bislang hast Du so gespielt:");
-			for (int i = 0; i < spiel.rufeAnzahlVersucheAb(); i++) {
+			for (int i = 1; i <= spiel.rufeAnzahlVersucheAb(); i++) {
 				int versuch = spiel.rufeVersuchAb(i);
 				int s = spiel.bewerteVersuch(versuch) / 10;
 				int w = spiel.bewerteVersuch(versuch) % 10;
-				System.out.println("Dein Versuch #" + (i + 1) + ": " + versuch + " Bewertung: " + s + "-" + w);
+				System.out.println("Dein Versuch #" + (i) + ": " + versuch + " Bewertung: " + s + "-" + w);
 			}
 		}
 	}
