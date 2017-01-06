@@ -81,6 +81,7 @@ public class Mastermind {
 		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
 		this.aktuellerVersuch = 0;
+		System.out.println(loesung);
 	}
 
 	/**
@@ -284,22 +285,20 @@ public class Mastermind {
 	private int generiereLoesung() {
 		int loesung = 0;
 		for (int i = 0; i < codeLaenge; i++) {
-			loesung += Math.pow(10, i * zufallsZahl(1, farbAnzahl));
+			loesung += Math.pow(10, i) * zufallsZahl(farbAnzahl);
 		}
 		return loesung;
 	}
 
 	/**
-	 * Liefert eine Zufallszahl.
+	 * Liefert eine Zufallszahl im Intervall {@code [1 ; max]}.
 	 * 
-	 * @param min
-	 *            untere Grenze
 	 * @param max
-	 *            obere Grenze
+	 *            obere Grenze (inklusiv)
 	 * @return Zufallszahl
 	 */
-	private int zufallsZahl(int min, int max) {
-		return min + (int) (Math.random() * ((max - min) + 1));
+	private int zufallsZahl(int max) {
+		return (int) (Math.random() * max) + 1;
 	}
 
 }
