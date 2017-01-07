@@ -267,7 +267,7 @@ public class Mastermind {
 	}
 
 	/**
-	 * Pr&uuml;ft, ob der zuletzt abgegebene Versuch er- folgreich war.
+	 * Pr&uuml;ft, ob der zuletzt abgegebene Versuch erfolgreich war.
 	 * 
 	 * @return
 	 * 		<ul>
