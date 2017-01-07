@@ -128,7 +128,7 @@ public class Mastermind {
 	}
 
 	/**
-	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL} .
+	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL}.
 	 */
 	public Mastermind() {
 		this(STANDARD_CODELAENGE, STANDARD_FARBANZAHL);
