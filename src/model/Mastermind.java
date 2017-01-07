@@ -21,7 +21,7 @@ public class Mastermind {
 	/**
 	 * Maximale Codel&auml;nge.
 	 */
-	public static final int MAX_CODELAENGE = 20;
+	public static final int MAX_CODELAENGE = 10;
 
 	/**
 	 * Minimale Farbanzahl.
@@ -73,7 +73,9 @@ public class Mastermind {
 	 * Originalspiels {@link #Mastermind()} ersetzt.
 	 * 
 	 * @param codeLaenge
+	 *            gew&uuml;nschte Codel&auml;nge
 	 * @param farbAnzahl
+	 *            gew&uuml;nschte Farbanzahl
 	 */
 	public Mastermind(int codeLaenge, int farbAnzahl) {
 		this.codeLaenge = korrigiereCodeLaenge(codeLaenge);
@@ -127,8 +129,7 @@ public class Mastermind {
 	}
 
 	/**
-	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL}
-	 * .
+	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL} .
 	 */
 	public Mastermind() {
 		this(STANDARD_CODELAENGE, STANDARD_FARBANZAHL);
@@ -170,7 +171,7 @@ public class Mastermind {
 		// ueberpruefe farben
 		for (int i = 0; i < codeLaenge; i++) {
 			int ziffer = versuch % 10;
-			gueltig &= (ziffer > 0) && (ziffer < farbAnzahl);
+			gueltig &= (ziffer > 0) && (ziffer <= farbAnzahl);
 			versuch = versuch / 10;
 		}
 
@@ -240,12 +241,28 @@ public class Mastermind {
 		}
 		int bewertung = 0;
 		int loesungKopie = loesung;
+		int[] ziffern = new int[10];
+		boolean[] richtig = new boolean[codeLaenge];
 		for (int i = 0; i < codeLaenge; i++) {
 			int zifferVersuch = versuch % 10;
 			int zifferLoesung = loesungKopie % 10;
-
-			bewertung += 0;
+			if (zifferVersuch == zifferLoesung) {
+				richtig[i] = true;
+				bewertung += 10;
+			} else {
+				ziffern[zifferVersuch]++;
+			}
 			versuch = versuch / 10;
+			loesungKopie = loesungKopie / 10;
+		}
+		loesungKopie = loesung;
+		for (int i = 0; i < codeLaenge; i++) {
+			int zifferLoesung = loesungKopie % 10;
+			if (!richtig[i] && ziffern[zifferLoesung] > 0) {
+				ziffern[zifferLoesung]--;
+				bewertung++;
+			}
+			loesungKopie = loesungKopie / 10;
 		}
 		return bewertung;
 	}
@@ -255,8 +272,8 @@ public class Mastermind {
 	 * 
 	 * @return
 	 * 		<ul>
-	 *         <li>{@code true}, falls der zuletzt abgegebene Versuch erfolgreich
-	 *         war</li>
+	 *         <li>{@code true}, falls der zuletzt abgegebene Versuch
+	 *         erfolgreich war</li>
 	 *         <li>{@code false}, falls der zuletzt abgegebene Versuche nicht
 	 *         erfolgreich war</li>
 	 *         <li>{@code false}, falls noch gar keine Versuche gab, weil das

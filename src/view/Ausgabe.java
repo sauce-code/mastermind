@@ -43,10 +43,10 @@ public class Ausgabe {
 	 */
 	public void druckeSpielverlauf() {
 		if (spiel.rufeAnzahlVersucheAb() == 0) {
-			System.out.println("Bisher kein Spielverlauf.");
+//			System.out.println("Bisher kein Spielverlauf.");
 		} else {
 			System.out.println("Bislang hast Du so gespielt:");
-			for (int i = 1; i <= spiel.rufeAnzahlVersucheAb(); i++) {
+			for (int i = spiel.rufeAnzahlVersucheAb(); i > 0 ; i--) {
 				int versuch = spiel.rufeVersuchAb(i);
 				int s = spiel.bewerteVersuch(versuch) / 10;
 				int w = spiel.bewerteVersuch(versuch) % 10;
