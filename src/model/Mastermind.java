@@ -83,7 +83,6 @@ public class Mastermind {
 		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
 		this.aktuellerVersuch = 0;
-		System.out.println(loesung);
 	}
 
 	/**
