@@ -60,7 +60,14 @@ public class Steuerung {
 	 *            Parameter, ungenutzt
 	 */
 	public static void main(String args[]) {
-		Mastermind m = new Mastermind();
+		System.out.println("Bitte Codelaenge eingeben (zwischen " + Mastermind.MIN_CODELAENGE + " und "
+				+ Mastermind.MAX_CODELAENGE + "):");
+		int codeLaenge = Terminal.readInt();
+		System.out.println("Bitte Farbanzahl eingeben (zwischen " + Mastermind.MIN_FARBANZAHL + " und "
+				+ Mastermind.MAX_FARBANZAHL + "):");
+		int farbAnzahl = Terminal.readInt();
+		System.out.println();
+		Mastermind m = new Mastermind(codeLaenge, farbAnzahl);
 		Ausgabe a = new Ausgabe(m);
 		Steuerung s = new Steuerung(m, a);
 		s.starteSpiel();

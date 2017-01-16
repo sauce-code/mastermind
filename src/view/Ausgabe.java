@@ -32,7 +32,11 @@ public class Ausgabe {
 	 * Anfang pr&auml;sentiert werden kann.
 	 */
 	public void denSpielerBegruessen() {
-		System.out.println("Willkommen zu Mastermind - und los geht’s!");
+		System.out.println("Willkommen zu Mastermind!");
+		System.out.println("Codelaenge: " + spiel.rufeCodeLaengeAb());
+		System.out.println("Farbanzahl: " + spiel.rufeFarbAnzahlAb());
+		System.out.println("Und los geht’s!");
+		System.out.println();
 	}
 
 	/**
@@ -52,6 +56,7 @@ public class Ausgabe {
 				int w = spiel.bewerteVersuch(versuch) % 10;
 				System.out.println("Dein Versuch #" + (i) + ": " + versuch + " Bewertung: " + s + "-" + w);
 			}
+			System.out.println();
 		}
 	}
 

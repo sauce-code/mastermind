@@ -205,6 +205,24 @@ public class Mastermind {
 	}
 
 	/**
+	 * Liefert die Codelaenge.
+	 * 
+	 * @return Codelaenge
+	 */
+	public int rufeCodeLaengeAb() {
+		return codeLaenge;
+	}
+	
+	/**
+	 * Liefert die Farbanzahl.
+	 * 
+	 * @return Farbanzahl
+	 */
+	public int rufeFarbAnzahlAb() {
+		return farbAnzahl;
+	}
+
+	/**
 	 * Gibt an, ob ein Index g&uuml;ltig ist.
 	 * 
 	 * @param index
