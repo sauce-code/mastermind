@@ -36,7 +36,7 @@ public class Ausgabe {
 		System.out.println("Codelaenge: " + spiel.rufeCodeLaengeAb());
 		System.out.println("Farbanzahl: " + spiel.rufeFarbAnzahlAb());
 		System.out.println("Und los geht’s!");
-		System.out.println();
+		leerzeile();
 	}
 
 	/**
@@ -47,16 +47,16 @@ public class Ausgabe {
 	 */
 	public void druckeSpielverlauf() {
 		if (spiel.rufeAnzahlVersucheAb() == 0) {
-//			System.out.println("Bisher kein Spielverlauf.");
+			// System.out.println("Bisher kein Spielverlauf.");
 		} else {
 			System.out.println("Bislang hast Du so gespielt:");
-			for (int i = spiel.rufeAnzahlVersucheAb(); i > 0 ; i--) {
+			for (int i = spiel.rufeAnzahlVersucheAb(); i > 0; i--) {
 				int versuch = spiel.rufeVersuchAb(i);
 				int s = spiel.bewerteVersuch(versuch) / 10;
 				int w = spiel.bewerteVersuch(versuch) % 10;
 				System.out.println("Dein Versuch #" + (i) + ": " + versuch + " Bewertung: " + s + "-" + w);
 			}
-			System.out.println();
+			leerzeile();
 		}
 	}
 
@@ -74,6 +74,13 @@ public class Ausgabe {
 	 */
 	public void demSpielerGratulieren() {
 		System.out.println("Glueckwunsch! - Du hast gewonnen!");
+	}
+
+	/**
+	 * Druckt eine leere Zeile. Wow.
+	 */
+	public void leerzeile() {
+		System.out.println();
 	}
 
 }

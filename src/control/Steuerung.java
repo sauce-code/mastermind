@@ -48,6 +48,7 @@ public class Steuerung {
 			ausgabe.druckeSpielverlauf();
 			ausgabe.spielerZumVersuchAuffordern();
 			int versuch = Terminal.readInt();
+			ausgabe.leerzeile();
 			spiel.speichereNaechstenVersuch(versuch);
 		} while (!spiel.spielGewonnen());
 		ausgabe.demSpielerGratulieren();
