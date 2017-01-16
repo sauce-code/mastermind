@@ -160,7 +160,7 @@ public class Mastermind {
 	 * 
 	 * @param versuch
 	 *            Versuch, welcher &uuml;berpr&uuml;ft werden soll
-	 * @return {@code true}, falls Veruch in ordnung
+	 * @return {@code true}, falls Veruch in Ordnung
 	 */
 	private boolean istVersuchGueltig(int versuch) {
 
