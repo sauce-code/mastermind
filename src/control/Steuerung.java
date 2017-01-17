@@ -50,8 +50,13 @@ public class Steuerung {
 			int versuch = Terminal.readInt();
 			ausgabe.leerzeile();
 			spiel.speichereNaechstenVersuch(versuch);
-		} while (!spiel.spielGewonnen());
-		ausgabe.demSpielerGratulieren();
+		} while (!spiel.spielGewonnen() && !spiel.spielVerloren());
+		if (spiel.spielGewonnen()) {
+			ausgabe.demSpielerGratulieren();
+		}
+		if (spiel.spielVerloren()) {
+			ausgabe.denSpielerBedauern();
+		}
 	}
 
 	/**

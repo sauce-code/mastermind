@@ -39,11 +39,6 @@ public class Mastermind {
 	public static final int MAX_FARBANZAHL = 9;
 
 	/**
-	 * Maximale Anzahl Versuche pro Partie.
-	 */
-	public static final int MAX_VERSUCHE = 1000;
-
-	/**
 	 * Speichert alle Versuche ab.
 	 */
 	private int[] versuche;
@@ -69,6 +64,11 @@ public class Mastermind {
 	private int farbAnzahl;
 
 	/**
+	 * Die maximale Anzahl an Versuchen.
+	 */
+	private int maxVersuche;
+
+	/**
 	 * Unzul&auml;ssige Angaben werden kommentarlos durch die Standardwerte des
 	 * Originalspiels {@link #Mastermind()} ersetzt.
 	 * 
@@ -80,9 +80,10 @@ public class Mastermind {
 	public Mastermind(int codeLaenge, int farbAnzahl) {
 		this.codeLaenge = korrigiereCodeLaenge(codeLaenge);
 		this.farbAnzahl = korrigiereFarbAnzahl(farbAnzahl);
-		this.versuche = new int[MAX_VERSUCHE];
 		this.loesung = generiereLoesung();
 		this.aktuellerVersuch = 0;
+		this.maxVersuche = berechneMaxVersuche();
+		this.versuche = new int[maxVersuche];
 	}
 
 	/**
@@ -128,6 +129,16 @@ public class Mastermind {
 	}
 
 	/**
+	 * Berechnet die maximalen Anzahl an Versuchen, die dem Spieler zur
+	 * Verf&uuml;gung stehen.
+	 * 
+	 * @return maximale Anzahl an Versuchen
+	 */
+	private int berechneMaxVersuche() {
+		return codeLaenge * farbAnzahl / 3 + 4;
+	}
+
+	/**
 	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL}.
 	 */
 	public Mastermind() {
@@ -146,7 +157,7 @@ public class Mastermind {
 	 * @return {@code true}, falls Versuch g&uuml;ltig
 	 */
 	public boolean speichereNaechstenVersuch(int versuch) {
-		if (!istVersuchGueltig(versuch)) {
+		if (!istVersuchGueltig(versuch) || spielVerloren()) {
 			return false;
 		}
 		versuche[aktuellerVersuch++] = versuch;
@@ -212,7 +223,7 @@ public class Mastermind {
 	public int rufeCodeLaengeAb() {
 		return codeLaenge;
 	}
-	
+
 	/**
 	 * Liefert die Farbanzahl.
 	 * 
@@ -220,6 +231,15 @@ public class Mastermind {
 	 */
 	public int rufeFarbAnzahlAb() {
 		return farbAnzahl;
+	}
+
+	/**
+	 * Liefert die maximale Anzahl an Versuchen.
+	 * 
+	 * @return maximale Anzahl an Versuchen
+	 */
+	public int rufeMaxVersucheAb() {
+		return maxVersuche;
 	}
 
 	/**
@@ -302,11 +322,21 @@ public class Mastermind {
 	}
 
 	/**
+	 * Pr&uuml;ft, ob die maximale Anzahl an Versuchen erreicht wurde und der
+	 * letzte Versuch nicht korrekt war..
+	 * 
+	 * @return {@code true}, falls das Spiel verloren ist
+	 */
+	public boolean spielVerloren() {
+		return (aktuellerVersuch == maxVersuche) && !spielGewonnen();
+	}
+
+	/**
 	 * L&auml;sst sich jederzeit wieder von vorn beginnen, d.h. alle Versuche
 	 * werden gel&ouml;scht und es wird ein neuer Zufallscode erzeugt.
 	 */
 	public void spielZuruecksetzen() {
-		versuche = new int[MAX_VERSUCHE];
+		versuche = new int[maxVersuche];
 		loesung = generiereLoesung();
 		aktuellerVersuch = 0;
 	}

@@ -35,6 +35,7 @@ public class Ausgabe {
 		System.out.println("Willkommen zu Mastermind!");
 		System.out.println("Codelaenge: " + spiel.rufeCodeLaengeAb());
 		System.out.println("Farbanzahl: " + spiel.rufeFarbAnzahlAb());
+		System.out.println("Maximale Versuche: " + spiel.rufeMaxVersucheAb());
 		System.out.println("Und los geht’s!");
 		leerzeile();
 	}
@@ -74,6 +75,14 @@ public class Ausgabe {
 	 */
 	public void demSpielerGratulieren() {
 		System.out.println("Glueckwunsch! - Du hast gewonnen!");
+	}
+
+	/**
+	 * Dient zur Ausgabe einer abschlie&szlig;enden Meldung, wenn der Spieler
+	 * die maximale Anzahl an Versuchen verbraucht hat.
+	 */
+	public void denSpielerBedauern() {
+		System.out.println("Keine weiteren Versuche! - Du hast leider verloren!");
 	}
 
 	/**
