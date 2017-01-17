@@ -135,7 +135,7 @@ public class Mastermind {
 	 * @return maximale Anzahl an Versuchen
 	 */
 	private int berechneMaxVersuche() {
-		return codeLaenge * farbAnzahl / 3 + 4;
+		return codeLaenge * farbAnzahl / 4 + 2;
 	}
 
 	/**
