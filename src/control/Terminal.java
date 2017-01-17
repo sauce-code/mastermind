@@ -14,7 +14,12 @@ public class Terminal {
 	/**
 	 * Liest eine Zahl aus der Konsole ein und liefert sie.
 	 * 
-	 * @return eingelesene Zahl aus der Konsole
+	 * @return
+	 * 		<ul>
+	 *         <li>eingelesene Zahl aus der Konsole</li>
+	 *         <li>{@code -1}, falls Eingabe ung&uuml;ltig oder sonstige Fehler
+	 *         auftreten</li>
+	 *         </ul>
 	 */
 	public static int readInt() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
