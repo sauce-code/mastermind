@@ -21,10 +21,7 @@ public class Terminal {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		try {
 			return Integer.parseInt(br.readLine());
-		} catch (NumberFormatException e) {
-			return -1;
-		} catch (IOException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
 			return -1;
 		}
 	}
