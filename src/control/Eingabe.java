@@ -14,7 +14,7 @@ public class Eingabe {
 	/**
 	 * Reader, wird zum Einlesen aus der Systemkonsole verwendet.
 	 */
-	private BufferedReader console = new BufferedReader(new InputStreamReader(System.in));
+	private BufferedReader konsole = new BufferedReader(new InputStreamReader(System.in));
 
 	/**
 	 * Gibt die n&auml;chste Eingabezeile als String zur&uuml;ck.
@@ -25,9 +25,9 @@ public class Eingabe {
 	 *         <li>{@code "\n"}, falls ein Fehler auftrat</li>
 	 *         </ul>
 	 */
-	public String readLine() {
+	public String leseZeile() {
 		try {
-			return console.readLine();
+			return konsole.readLine();
 		} catch (IOException e) {
 			return "\n";
 		}
@@ -44,12 +44,12 @@ public class Eingabe {
 	 *         </li>
 	 *         </ul>
 	 */
-	public int readInt() {
-		return parseInt(readLine());
+	public int leseInt() {
+		return konvertiereInt(leseZeile());
 	}
 
 	/**
-	 * Wandelt {@code zahl} in einen int-Wert.
+	 * Konvertiert {@code zahl} in einen int-Wert.
 	 * 
 	 * @param zahl
 	 *            Zahl, welche gewandelt werden soll
@@ -59,7 +59,7 @@ public class Eingabe {
 	 *         <li>{@code 0}, falls {@code zahl} nicht wandelbar</li>
 	 *         </ul>
 	 */
-	private int parseInt(String zahl) {
+	private int konvertiereInt(String zahl) {
 		try {
 			return Integer.parseInt(zahl);
 		} catch (NumberFormatException e) {

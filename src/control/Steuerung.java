@@ -53,7 +53,7 @@ public class Steuerung {
 		do {
 			ausgabe.druckeSpielverlauf();
 			ausgabe.spielerZumVersuchAuffordern();
-			int versuch = eingabe.readInt();
+			int versuch = eingabe.leseInt();
 			ausgabe.leerzeile();
 			spiel.speichereNaechstenVersuch(versuch);
 		} while (!spiel.spielGewonnen() && !spiel.spielVerloren());
@@ -74,10 +74,10 @@ public class Steuerung {
 	public static void main(String args[]) {
 		System.out.println("Bitte Codelaenge eingeben (zwischen " + Mastermind.MIN_CODELAENGE + " und "
 				+ Mastermind.MAX_CODELAENGE + "):");
-		int codeLaenge = new Eingabe().readInt();
+		int codeLaenge = new Eingabe().leseInt();
 		System.out.println("Bitte Farbanzahl eingeben (zwischen " + Mastermind.MIN_FARBANZAHL + " und "
 				+ Mastermind.MAX_FARBANZAHL + "):");
-		int farbAnzahl = new Eingabe().readInt();
+		int farbAnzahl = new Eingabe().leseInt();
 		System.out.println();
 		Mastermind m = new Mastermind(codeLaenge, farbAnzahl);
 		Ausgabe a = new Ausgabe(m);
