@@ -49,7 +49,7 @@ public class Eingabe {
 	}
 
 	/**
-	 * Konvertiert {@code zahl} in einen int-Wert.
+	 * Wandelt {@code zahl} in einen int-Wert.
 	 * 
 	 * @param zahl
 	 *            Zahl, welche gewandelt werden soll
