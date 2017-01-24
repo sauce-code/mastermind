@@ -24,6 +24,11 @@ public class Steuerung {
 	 * Ausgabe, die verwendet werden soll.
 	 */
 	private Ausgabe ausgabe;
+	
+	/**
+	 * Eingabe, die verwendet werden soll.
+	 */
+	private Eingabe eingabe;
 
 	/**
 	 * Erzeugt eine neue Steuerung.
@@ -36,6 +41,7 @@ public class Steuerung {
 	public Steuerung(Mastermind spiel, Ausgabe ausgabe) {
 		this.spiel = spiel;
 		this.ausgabe = ausgabe;
+		this.eingabe = new Eingabe();
 	}
 
 	/**
@@ -47,7 +53,7 @@ public class Steuerung {
 		do {
 			ausgabe.druckeSpielverlauf();
 			ausgabe.spielerZumVersuchAuffordern();
-			int versuch = Terminal.readInt();
+			int versuch = eingabe.readInt();
 			ausgabe.leerzeile();
 			spiel.speichereNaechstenVersuch(versuch);
 		} while (!spiel.spielGewonnen() && !spiel.spielVerloren());
@@ -68,10 +74,10 @@ public class Steuerung {
 	public static void main(String args[]) {
 		System.out.println("Bitte Codelaenge eingeben (zwischen " + Mastermind.MIN_CODELAENGE + " und "
 				+ Mastermind.MAX_CODELAENGE + "):");
-		int codeLaenge = Terminal.readInt();
+		int codeLaenge = new Eingabe().readInt();
 		System.out.println("Bitte Farbanzahl eingeben (zwischen " + Mastermind.MIN_FARBANZAHL + " und "
 				+ Mastermind.MAX_FARBANZAHL + "):");
-		int farbAnzahl = Terminal.readInt();
+		int farbAnzahl = new Eingabe().readInt();
 		System.out.println();
 		Mastermind m = new Mastermind(codeLaenge, farbAnzahl);
 		Ausgabe a = new Ausgabe(m);
