@@ -21,7 +21,7 @@ public class Mastermind {
 	/**
 	 * Maximale Codel&auml;nge.
 	 */
-	public static final int MAX_CODELAENGE = 10;
+	public static final int MAX_CODELAENGE = 9;
 
 	/**
 	 * Minimale Farbanzahl.
