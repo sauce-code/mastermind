@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * Hilfs-Klasse zum Einlesen von Zahlen von der Konsole.
+ * Hilfsklasse zum Einlesen von Zahlen von der Konsole.
  * 
  * @author ich
  *
