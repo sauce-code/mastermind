@@ -16,7 +16,7 @@ public class Mastermind {
 	/**
 	 * Standard Codel&auml;nge.
 	 */
-	public static final int STANDARD_CODELAENGE = 4;
+	public static final int STD_CODELAENGE = 4;
 
 	/**
 	 * Maximale Codel&auml;nge.
@@ -31,7 +31,7 @@ public class Mastermind {
 	/**
 	 * Standard farbanzahl.
 	 */
-	public static final int STANDARD_FARBANZAHL = 6;
+	public static final int STD_FARBANZAHL = 6;
 
 	/**
 	 * Maximale Farbanzahl.
@@ -94,15 +94,15 @@ public class Mastermind {
 	 * @return
 	 * 		<ul>
 	 *         <li>codeLaenge, falls codeLaenge g&uuml;ltig</li>
-	 *         <li>{@link #STANDARD_CODELAENGE}, falls codeLaenge {@code <}
+	 *         <li>{@link #STD_CODELAENGE}, falls codeLaenge {@code <}
 	 *         {@link #MIN_CODELAENGE}</li>
-	 *         <li>{@link #STANDARD_CODELAENGE}, falls codeLaenge {@code >}
+	 *         <li>{@link #STD_CODELAENGE}, falls codeLaenge {@code >}
 	 *         {@link #MAX_CODELAENGE}</li>
 	 *         </ul>
 	 */
 	private int korrigiereCodeLaenge(int codeLaenge) {
 		if (codeLaenge < MIN_CODELAENGE || codeLaenge > MAX_CODELAENGE) {
-			return STANDARD_CODELAENGE;
+			return STD_CODELAENGE;
 		}
 		return codeLaenge;
 	}
@@ -115,15 +115,15 @@ public class Mastermind {
 	 * @return
 	 * 		<ul>
 	 *         <li>farbAnzahl, falls farbAnzahl g&uuml;ltig</li>
-	 *         <li>{@link #STANDARD_FARBANZAHL}, falls farbAnzahl {@code <}
+	 *         <li>{@link #STD_FARBANZAHL}, falls farbAnzahl {@code <}
 	 *         {@link #MIN_FARBANZAHL}</li>
-	 *         <li>{@link #STANDARD_FARBANZAHL}, falls farbAnzahl {@code >}
+	 *         <li>{@link #STD_FARBANZAHL}, falls farbAnzahl {@code >}
 	 *         {@link #MAX_FARBANZAHL}</li>
 	 *         </ul>
 	 */
 	private int korrigiereFarbAnzahl(int farbAnzahl) {
 		if (farbAnzahl < MIN_FARBANZAHL || farbAnzahl > MAX_FARBANZAHL) {
-			return STANDARD_FARBANZAHL;
+			return STD_FARBANZAHL;
 		}
 		return farbAnzahl;
 	}
@@ -139,10 +139,10 @@ public class Mastermind {
 	}
 
 	/**
-	 * Verwendet {@link #STANDARD_CODELAENGE} und {@link #STANDARD_FARBANZAHL}.
+	 * Verwendet {@link #STD_CODELAENGE} und {@link #STD_FARBANZAHL}.
 	 */
 	public Mastermind() {
-		this(STANDARD_CODELAENGE, STANDARD_FARBANZAHL);
+		this(STD_CODELAENGE, STD_FARBANZAHL);
 	}
 
 	/**
