@@ -246,7 +246,7 @@ public class Mastermind {
 	 * Gibt an, ob ein Index g&uuml;ltig ist.
 	 * 
 	 * @param index
-	 *            Index, welche &uuml;berpr&uuml;ft werden soll.
+	 *            Index, welche &uuml;berpr&uuml;ft werden soll
 	 * @return {@code true}, falls Index g&uuml;ltig
 	 */
 	private boolean istIndexGueltig(int index) {
