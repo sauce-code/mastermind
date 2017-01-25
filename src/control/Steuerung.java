@@ -6,7 +6,7 @@ import model.Mastermind;
 /**
  * Stererungs-Klasse.
  * 
- * @see control.Terminal
+ * @see control.Eingabe
  * @see model.Mastermind
  * @see view.Ausgabe
  * 
