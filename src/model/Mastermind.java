@@ -90,7 +90,7 @@ public class Mastermind {
 	 * Liefert die Codel&auml;nge korrigiert zur&uuml;ck, falls n&ouml;tig.
 	 * 
 	 * @param codeLaenge
-	 *            Codel&auml;nge, welche korrigiert werden soll.
+	 *            Codel&auml;nge, welche korrigiert werden soll
 	 * @return
 	 * 		<ul>
 	 *         <li>codeLaenge, falls codeLaenge g&uuml;ltig</li>
