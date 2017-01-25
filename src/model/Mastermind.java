@@ -263,7 +263,7 @@ public class Mastermind {
 	 * R&uuml;ckgabewert {@code -1} zur&uuml;ckgewiesen.
 	 * 
 	 * @param versuch
-	 *            welcher Versuch?
+	 *            Versuch, welcher bewertet werden soll
 	 * @return
 	 * 		<ul>
 	 *         <li>{@code -1}, falls Versuch ung&uuml;ltig</li>
