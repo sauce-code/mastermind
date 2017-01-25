@@ -111,7 +111,7 @@ public class Mastermind {
 	 * Liefert die Farbanzahl korrigiert zur&uuml;ck, falls n&ouml;tig.
 	 * 
 	 * @param farbAnzahl
-	 *            Farbanzahl, welche korrigiert werden soll.
+	 *            Farbanzahl, welche korrigiert werden soll
 	 * @return
 	 * 		<ul>
 	 *         <li>farbAnzahl, falls farbAnzahl g&uuml;ltig</li>
