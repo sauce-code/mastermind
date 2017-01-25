@@ -153,7 +153,7 @@ public class Mastermind {
 	 * auf und auch die Codel&auml;nge muss stimmen).
 	 * 
 	 * @param versuch
-	 *            wievielter versuch?
+	 *            Versuch, welcher gespeichert werden soll
 	 * @return {@code true}, falls Versuch g&uuml;ltig
 	 */
 	public boolean speichereNaechstenVersuch(int versuch) {
